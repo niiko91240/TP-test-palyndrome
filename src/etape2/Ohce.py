@@ -1,6 +1,4 @@
 import datetime
-from Langues.LangueFrancaise import LangueFrancaise
-from Langues.LangueAnglaise import LangueAnglaise
 
 now = datetime.datetime.now()
 
@@ -9,6 +7,8 @@ class Ohce():
     def __init__(self, langue):
         self.langue = langue
 
+    def bien_dit(self):
+        return self.langue.bien_dit()
 
     def bonjour(heure : datetime):
         texte = ""
@@ -33,7 +33,7 @@ class Ohce():
     def miror(self, string):
         reverse_text = string[::-1]
         if (reverse_text == string):
-            print(self.langue.bien_dit())
+            print(self.bien_dit())
         return reverse_text
 
 
@@ -41,7 +41,7 @@ class Ohce():
 
 
 
-if __name__ == '__main__':
+"""if __name__ == '__main__':
     ohce = Ohce(LangueAnglaise)
     print(ohce.langue.bien_dit())
     #print(ohce.bonjour(now))
@@ -51,4 +51,4 @@ if __name__ == '__main__':
         if (text == 'quit'):
             print(ohce.aurevoir(now))
             break
-        print(ohce.miror(text))
+        print(ohce.miror(text))"""
