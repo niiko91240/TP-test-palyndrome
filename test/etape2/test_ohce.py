@@ -30,11 +30,11 @@ class TestMain(unittest.TestCase):
         date = datetime.now().replace(hour=12)
         self.assertEqual(Ohce(LangueAnglaise).bonjour(date), 'Hello !')
 
-    def test_hello_aftermoon_fr(self):
+    def test_hello_afternoon_fr(self):
         date = datetime.now().replace(hour=19)
         self.assertEqual(Ohce(LangueFrancaise).bonjour(date), 'Bonsoir !')
 
-    def test_hello_aftermoon_en(self):
+    def test_hello_afternoon_en(self):
         date = datetime.now().replace(hour=19)
         self.assertEqual(Ohce(LangueAnglaise).bonjour(date), 'Good Evening !')
 
