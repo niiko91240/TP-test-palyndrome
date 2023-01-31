@@ -26,6 +26,21 @@ class TestMain(unittest.TestCase):
         else:
             self.assertEqual(Ohce(self.langue_systeme).periode(now), 'SOIR')
 
+    def test_recette_1(self):
+        date = datetime.datetime.now().replace(hour=19)
+        self.assertEqual(Ohce('en_GB').miror('kayak'), 'kayak')
+        self.assertEqual(Ohce('en_GB').bonjour(date), 'Good Evening !')
+        self.assertEqual(Ohce('en_GB').aurevoir(date), 'Good night !')
+
+    def test_recette_2(self):
+        date = datetime.datetime.now().replace(hour=10)
+        self.assertEqual(Ohce('fr_FR').miror('test'), 'tset')
+        self.assertEqual(Ohce('fr_FR').bonjour(date), 'Allez on se réveille !')
+        self.assertEqual(Ohce('fr_FR').aurevoir(date), 'On retourne se coucher !')
+
+
+
+
 
 
 
