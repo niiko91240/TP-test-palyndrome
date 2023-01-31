@@ -13,9 +13,15 @@ class TestMain(unittest.TestCase):
     string += '\n ALORS {} de cette langue à cette période est envoyée avant tout'
 
     def test_bonjour_fr(self):
-        date = datetime.now().replace(hour=10)
-        print(self.string.format(LangueFrancaise.langue,Ohce(LangueFrancaise).periode(date),Ohce(LangueFrancaise).bonjour(date)))
-        self.assertEqual(Ohce(LangueFrancaise).bonjour(date), 'Allez on se réveille !')
+        hours = [10,12,19]
+        for x in hours:
+            date = datetime.now().replace(hour=x)
+            print(self.string.format(LangueFrancaise.langue, Ohce(LangueFrancaise).periode(date),
+                                     Ohce(LangueFrancaise).bonjour(date)))
+            self.assertEqual(Ohce(LangueFrancaise).bonjour(date), 'Allez on se réveille !')
+
+
+
 
 
 
