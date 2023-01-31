@@ -38,6 +38,30 @@ class TestMain(unittest.TestCase):
         date = datetime.now().replace(hour=19)
         self.assertEqual(Ohce(LangueAnglaise).bonjour(date), 'Good Evening !')
 
+    def test_goodbye_morning_fr(self):
+        date = datetime.now().replace(hour=10)
+        self.assertEqual(Ohce(LangueFrancaise).aurevoir(date), 'On retourne se coucher !')
+
+    def test_goodbye_morning_en(self):
+        date = datetime.now().replace(hour=10)
+        self.assertEqual(Ohce(LangueAnglaise).aurevoir(date), 'Have a good morning !')
+
+    def test_goodbye_moon_fr(self):
+        date = datetime.now().replace(hour=12)
+        self.assertEqual(Ohce(LangueFrancaise).aurevoir(date), 'Bonne journée !')
+
+    def test_goodbye_moon_en(self):
+        date = datetime.now().replace(hour=12)
+        self.assertEqual(Ohce(LangueAnglaise).aurevoir(date), 'Bye !')
+
+    def test_goodbye_aftermoon_fr(self):
+        date = datetime.now().replace(hour=19)
+        self.assertEqual(Ohce(LangueFrancaise).aurevoir(date), 'Bonne soirée !')
+
+    def test_goodbye_aftermoon_en(self):
+        date = datetime.now().replace(hour=19)
+        self.assertEqual(Ohce(LangueAnglaise).aurevoir(date), 'Good night !')
+
 
 
 
