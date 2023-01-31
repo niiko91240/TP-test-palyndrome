@@ -10,25 +10,11 @@ class Ohce():
     def bien_dit(self):
         return self.langue.bien_dit()
 
-    def bonjour(heure : datetime):
-        texte = ""
-        if (heure.hour < 11):
-            texte = 'Allez on se réveille !'
-        elif (heure.hour < 18):
-            texte = 'Bonjour !'
-        else:
-            texte = 'Bonsoir !'
-        return texte
+    def bonjour(self, heure : datetime):
+        return self.langue.bonjour(heure)
 
-    def aurevoir(heure : datetime):
-        texte = ""
-        if (heure.hour < 11):
-            texte = 'On retourne se coucher !'
-        elif (heure.hour < 18):
-            texte = 'Bonne journée !'
-        else:
-            texte = 'Bonne soirée !'
-        return texte
+    def aurevoir(self, heure : datetime):
+        return self.langue.aurevoir(heure)
 
     def miror(self, string):
         reverse_text = string[::-1]
