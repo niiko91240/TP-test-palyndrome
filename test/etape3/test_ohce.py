@@ -1,7 +1,7 @@
 import unittest
-from src.etape2.Ohce import Ohce
-from src.etape2.Langues.LangueFrancaise import LangueFrancaise
-from src.etape2.Langues.LangueAnglaise import LangueAnglaise
+from src.etape3.Ohce import Ohce
+from src.etape3.Langues.LangueFrancaise import LangueFrancaise
+from src.etape3.Langues.LangueAnglaise import LangueAnglaise
 from datetime import datetime
 
 
@@ -22,7 +22,7 @@ class TestMain(unittest.TestCase):
         date = datetime.now().replace(hour=10)
         print(self.string.format(LangueAnglaise.langue, Ohce(LangueAnglaise).periode(date),
                                  Ohce(LangueAnglaise).bonjour(date)))
-        self.assertEqual(Ohce(LangueAnglaise).bonjour(date), 'Have a good morning !')
+        self.assertEqual(Ohce(LangueAnglaise).bonjour(date), 'Wake up !')
 
     def test_bonjour_moon_fr(self):
         date = datetime.now().replace(hour=12)
