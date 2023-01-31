@@ -15,3 +15,12 @@ class LangueFrancaise:
             texte = 'Bonsoir !'
         return texte
 
+    def aurevoir(heure: datetime):
+        texte = ""
+        if (heure.hour < 11):
+            texte = 'On retourne se coucher !'
+        elif (heure.hour < 18):
+            texte = 'Bonne journée !'
+        else:
+            texte = 'Bonne soirée !'
+        return texte
